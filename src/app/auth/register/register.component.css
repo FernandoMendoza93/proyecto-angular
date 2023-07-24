@@ -1,0 +1,64 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optional: Adjust the height to your preference */
+}
+
+/* Apply these styles to the child container */
+.m-auto {
+  width: 100%; /* Optional: Adjust the width to your preference */
+  max-width: 400px;
+}
+
+.uno{
+  display: grid;
+  place-items: center;
+}
+
+.dos{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.tres{
+  display: grid;
+  place-items: center;
+}
+
+  
+.center {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.contenedorlogin {
+  margin: auto;
+  margin-bottom: 100px;
+  padding: 20px ;
+  width: 150%;
+  background-color:rgb(198, 198, 228);
+  text-align: center;
+}
+      
+    .mat-form-field {
+      margin-bottom: 20px;
+    }
+  
+    .mat-card-actions {
+      display: flex;
+      justify-content: space-between;
+  
+      button {
+        margin: 10px;
+      }
+    }
+  
+  .grid-colt1{
+    display: grid;
+    grid-template-columns: 1,1rem;
+  }
+  

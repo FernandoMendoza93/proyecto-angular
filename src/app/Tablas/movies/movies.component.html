@@ -1,0 +1,32 @@
+<div *ngIf="movies.length > 0">
+    <mat-table [dataSource]="movies">
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+        <mat-cell *matCellDef="let movie">{{ movie.title }}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="overview">
+        <mat-header-cell *matHeaderCellDef>Overview</mat-header-cell>
+        <mat-cell *matCellDef="let movie">{{ movie.overview }}</mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="poster">s
+        <mat-header-cell *matHeaderCellDef>Poster</mat-header-cell>
+        <mat-cell *matCellDef="let movie">
+          <img [src]="movie.poster_path" alt="{{ movie.title }}" />
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="['title', 'overview', 'poster']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['title', 'overview', 'poster']"></mat-row>
+    </mat-table>
+  
+    <mat-paginator
+      [length]="totalMovies"
+      [pageSize]="pageSize"
+      [pageIndex]="pageIndex"
+      [pageSizeOptions]="[10, 20, 50, 100]"
+      (page)="onPageChange($event)"
+    ></mat-paginator>
+  </div>
+  
